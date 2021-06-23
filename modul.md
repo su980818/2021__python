@@ -6,14 +6,16 @@
 
 # 1.모듈 불러오기
 
-## 1)mod1.py 이 있을 경우(python 라이브러리나 실행 스크립트와 같은 파일에 있어야만 import가능)
+## 1)mod1.fuc()
+
+mod1.py 이 있을 경우(python 라이브러리나 실행 스크립트와 같은 파일에 있어야만 import가능)
 
 <pre>
 import mod1
 mod1.fuc()
 </pre>
 
-## 2)fuc()으로만 사용하고 싶은경우
+## 2)fuc()
 
 <pre>
 from mod1 import fuc
