@@ -28,6 +28,7 @@ f.write()
 
 # 2.파일을 읽는 여러 방법 
 ## 1)readline() 
+#### [라인별 read]()
 <pre>
 f = open("C:/doit/새파일.txt", 'r')
 while True:
@@ -36,9 +37,43 @@ while True:
     print(line)
 f.close()
 </pre>
-*# 읽을 라인이 *
-</pre>ㅇㅓㅂㅅㅇ
 
 
-## 2)readlines
+*# 읽을 라인이 없을 경우 "" 문자열 반환*
+
+
+
+## 2)readlines()
+#### [모든라인을 리스트로 read]()
+<pre>
+lines_list = f.readlines()
+</pre>
+
+
+
+
 ## 3)read
+#### [모든라인을 문자열로 read]()
+<pre>
+lines_string = f.read()
+</pre>
+
+# 3.파일에 내용 appand
+
+<pre>
+f = open("C:/doit/새파일.txt",'a')
+f.write()
+f.close()
+</pre>
+
+# 4.with문을 통한 파일 입출력
+#### [파일 open , close 를 자동으로 하는 command]()
+<pre>
+with open("foo.txt", "w") as f:
+    f.write("Life is too short, you need python")
+</pre>
+
+<pre>
+with open("foo.txt", "w") as f:
+    f.write("Life is too short, you need python")
+</pre>
