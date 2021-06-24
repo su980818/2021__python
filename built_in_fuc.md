@@ -1,3 +1,6 @@
+# BUILT IN FUC 
+많이 쓰이는 빌트인 펑션을 다루어보자. 
+
 1. abs
 2. all
 3. any
