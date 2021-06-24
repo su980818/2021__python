@@ -39,10 +39,12 @@ Abs(value) = |value|
 
 # 2. all
 all(array)
+
 Array 내부에 0(false)가 하나도 없으면 True반환
 
 # 3. Any
 Any(array)
+
 array 내부에 True가 하나라도 있으면 True반환\
 
 # 4. Chr
@@ -50,6 +52,7 @@ Chr(unicode) 출력
 
 # 5. dir
 Dir(variable) = list
+
 Variable( obj ) 가 가지고있는 fun , variable 를 list에 저장
 
 # 6. Divmod
@@ -57,6 +60,8 @@ Divmod( dividend, divisor) = ( quotient , remainder )
 
 # 7. Enumerate
 Enumerate( array ) = <class 'enumerate’> 
+
+
 array 에 Index 번호가 매겨진 enumerate class 반환
 
 <pre>
@@ -68,10 +73,12 @@ array 에 Index 번호가 매겨진 enumerate class 반환
 # 8. Eval
 
 Eval(string)
+
 string이 실행가능한 command라면 실행
 
 # 9. Filter
 Filter( fun_name , array ) = list
+
 fuc_name() 함수에 array를 차례차례 입력하여 반환값이 참인경우만 list에 저장
 
 # 10. Hex
@@ -88,6 +95,7 @@ Int( other_data_type_Input , input’s_base  ) = int_type
 
 # 14. isinstance
 Isinstance( obj , class) = bool
+
 obj( instance ) 의 자료형이 class 와 같으면 True
 
 # 15. Len
@@ -139,6 +147,7 @@ Round(value [,  digits]) = int
 
 # 26. Sorted
 Sorted(array) = list 
+
 list.sort() : list를 솔트해서 list에 바로 저장
 
 # 27. Str
