@@ -1,17 +1,17 @@
-  1 sys
-  2 pickle
-  3 os
-  4 shutil
-  5 glob
-  6 tempfile
-  7 time
-  8 calendar
-  9 random
- 10 webbrowserwebbrowser
+  1. sys
+  2. pickle
+  3. os
+  4. shutil
+  5. glob
+  6. tempfile
+  7. time
+  8. calendar
+  9. random
+ 10. webbrowserwebbrowser
 
 
-# 1 sys 
-python interpreter가 제공하는 모듈
+# 1. sys 
+[python interpreter가 제공하는 모듈]()
 > sys.argv   (variable)
 command줄에서 parameter을 리스트로 저장중
 
@@ -23,8 +23,8 @@ command줄에서 parameter을 리스트로 저장중
 
 
 
-# 2 pickle
-pickle은 value의 data_type을 그대로 유지하면서 파일에 저장하고 불러올 수 있게 하는 모듈이다
+# 2. pickle
+[pickle은 value의 data_type을 그대로 유지하면서 파일에 저장하고 불러올 수 있게 하는 모듈이다]()
 ###### <write to file>
 <pre>
 import pickle
@@ -43,8 +43,8 @@ print(data)
 </pre>
 
 
-# 3 os
-OS 모듈은 환경 변수나 디렉터리 , 파일 등의 OS자원을 제어할 수 있게 해주는 모듈
+# 3. os
+[OS 모듈은 환경 변수나 디렉터리 , 파일 등의 OS자원을 제어할 수 있게 해주는 모듈]()
 
 > os.environ
 시스템의 환경변수를 딕셔너리로 저장중
@@ -73,19 +73,19 @@ print(f.read())
 
 
 
-# 4 shutil
+# 4. shutil
 > shutill.copy('file_name1','file_name2')
 
-# 5 glob
+# 5. glob
 > glob.glob('path_name')
 path_name의 파일이름을 리스트로 반환 ( ? * 의 메타문자 사용가능) 
-#  6 tempfile
+#  6. tempfile
 > tempfile.mkstemp() = "temp_file_name"
 
 > tempfile.TemporaryFile() = file_variable ( wb로 열림 ) 
 
 
-#  7 time
+#  7. time
 > time.time() = float
 1970년 1월 1일 0시 0분 0 기준으로 몇초 지나는지 float으로 반환
 
@@ -131,7 +131,7 @@ time.localtime() 을 읽을수 있는 string으로 반환
 num_second 의 시간을 두고 다음명령 실행
 
 
-#  8 calendar
+#  8. calendar
 > print(calendar.calendar(연도))
 > calendar.prmonth(2015, 12)
 > calendar.weekday(2015, 12, 31)
@@ -143,7 +143,7 @@ num_second 의 시간을 두고 다음명령 실행
 
 
 
-#  9 random
+#  9. random
 > random.random() = float ( 0 ~ 1 )
 > random.randint(start , end ) = int
 > random.choice(array) = array[random_value]
@@ -156,7 +156,7 @@ array 를 suffle해서 바로 저장
 
 
 
-# 10 webbrowser
+# 10. webbrowser
 >  webbrowser.open("http://google.com")
 
 
