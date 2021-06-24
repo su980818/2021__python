@@ -133,7 +133,7 @@ time.localtime() 을 읽을수 있는 string으로 반환
 |%%|문자	|%|
 |%y|세기부분을 제외한 년도 출력	|01|
 
-<pre> time.sleep(num) 
+<pre> time.sleep(num)  </pre>
 num_second 의 시간을 두고 다음명령 실행
 
 
