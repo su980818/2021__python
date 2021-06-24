@@ -14,13 +14,13 @@
 
 # 1. sys 
 [python interpreter가 제공하는 모듈]()
-> sys.argv   (variable)
+<pre> sys.argv   (variable) </pre>
 command줄에서 parameter을 리스트로 저장중
 
-> sys.exit()
+<pre> sys.exit() </pre>
 강제 종료 Ctrl+Z
 
-> sys.path (variable)
+<pre> sys.path (variable) </pre>
 모듈을을 불러오는 경로를 list로 저장중
 
 
@@ -48,19 +48,19 @@ print(data)
 # 3. os
 [OS 모듈은 환경 변수나 디렉터리 , 파일 등의 OS자원을 제어할 수 있게 해주는 모듈]()
 
-> os.environ
+<pre> os.environ </pre>
 시스템의 환경변수를 딕셔너리로 저장중
 
-> os.chdir('PATH')
+<pre> os.chdir('PATH') </pre>
 현재 딕셔너리 이동
 
-> os.getcwd()
+<pre> os.getcwd() </pre>
 현재 딕셔너리 string으로 반환
 
-> os.system('command')
+<pre> os.system('command') </pre>
 system 명령어 호출후 return값 출력
 
-> os.popen('command')  = file_variable
+<pre> os.popen('command')  = file_variable </pre>
 실행한 명령어의 결과갑을 파일변수에 읽기모드로 return
 print(f.read())
 
@@ -76,31 +76,35 @@ print(f.read())
 
 
 # 4. shutil
-> shutill.copy('file_name1','file_name2')
+<pre> shutill.copy('file_name1','file_name2') </pre>
 
 # 5. glob
-> glob.glob('path_name')
-path_name의 파일이름을 리스트로 반환 ( ? * 의 메타문자 사용가능) 
-#  6. tempfile
-> tempfile.mkstemp() = "temp_file_name"
 
-> tempfile.TemporaryFile() = file_variable ( wb로 열림 ) 
+<pre> glob.glob('path_name') </pre>
+path_name의 파일이름을 리스트로 반환 ( ? * 의 메타문자 사용가능) 
+
+
+
+#  6. tempfile
+<pre> tempfile.mkstemp() = "temp_file_name"  </pre>
+
+<pre> tempfile.TemporaryFile() = file_variable ( wb로 열림 )  </pre>
 
 
 #  7. time
-> time.time() = float
+<pre> time.time() = float </pre>
 1970년 1월 1일 0시 0분 0 기준으로 몇초 지나는지 float으로 반환
 
-> time.localtime()
+<pre> time.localtime() </pre>
 time.time() 를 time_class로 반환
 
-> time.asctime()
+<pre> time.asctime() </pre>
 time.localtime() 을 읽을수 있는 string으로 반환
 
-> time.ctime()
+<pre> time.ctime() </pre>
 위와 동일하지만 현재시간만을 반환
 
-> time.strftime(format)
+<pre> time.strftime(format) </pre>
 시간을 format형태의 string으로 반환
 
 ###### < format >
@@ -129,27 +133,27 @@ time.localtime() 을 읽을수 있는 string으로 반환
 |%%|문자	|%|
 |%y|세기부분을 제외한 년도 출력	|01|
 
-> time.sleep(num) 
+<pre> time.sleep(num) 
 num_second 의 시간을 두고 다음명령 실행
 
 
 #  8. calendar
-> print(calendar.calendar(연도))
-> calendar.prmonth(2015, 12)
-> calendar.weekday(2015, 12, 31)
+<pre>print(calendar.calendar(연도)) </pre>
+<pre> calendar.prmonth(2015, 12) </pre>
+<pre> calendar.weekday(2015, 12, 31) </pre>
 해당 날짜에 대응하는 요일 반환
 
-> calendar.monthrange
+<pre> calendar.monthrange </pre>
 ( 해당 날짜 1일의 요일 , 몇일가지 있는지 ) 반환
 
 
 
 
-#  9. random
-> random.random() = float ( 0 ~ 1 )
-> random.randint(start , end ) = int
-> random.choice(array) = array[random_value]
-> random.shuffle(array) 
+#  9. random 
+<pre> random.random() = float ( 0 ~ 1 ) </pre>
+<pre> random.randint(start , end ) = int </pre>
+<pre> random.choice(array) = array[random_value] </pre>
+<pre> random.shuffle(array)  </pre>
 array 를 suffle해서 바로 저장
 
 
@@ -159,7 +163,7 @@ array 를 suffle해서 바로 저장
 
 
 # 10. webbrowser
->  webbrowser.open("http://google.com")
+<pre> webbrowser.open("http://google.com") </pre>
 
 
 
