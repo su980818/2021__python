@@ -2,7 +2,8 @@
 
 ## 1) 문자 클래스[]
 [abc] = a or b or c
-[a-zA-z] = a~z or A~Z
+
+[a-zA-z] = a\~z or A\~Z
 
 
 ### #) 자주 사용되는 문자 클래스의 short_cut
@@ -24,11 +25,11 @@
 ## 3) 반복   
 
 ### a. *
-* = 0 ~ INF 
+\* = 0 ~ INF 
 
 
 ### b. +
-+ = 1 ~ INF 
+\+ = 1 ~ INF 
 
 ### c. {m,n}
 
