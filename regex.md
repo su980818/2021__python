@@ -52,8 +52,8 @@ str1|str2 = str1 or str2
 
 
 <pre>
->>> print(re.search('short$', 'Life is too short'))
-<re.Match object; span=(12, 17), match='short'>
+>>> print(re.search('short$', 'Life is too short'
+\<re.Match object; span=(12, 17), match='short'\>
 </pre>
 
 \Z 도 위와 동일
@@ -63,7 +63,7 @@ str1|str2 = str1 or str2
 <pre>
 >>> p = re.compile(r'\bclass\b')
 >>> print(p.search('no class at all')) 
-<re.Match object; span=(3, 8), match='class'>
+\<re.Match object; span=(3, 8), match='class'\>
 </pre>
 
 white space에 의해 구분된 문자열을 match
