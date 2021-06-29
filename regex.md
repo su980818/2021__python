@@ -74,11 +74,11 @@ white space이외의 것으로 구분된 문자열을 match
 
 # 2. Grouping
 grouping 을 하는 이유
-1. 반복되는 문자열을 표현하기위해
+### a. 반복되는 문자열을 표현하기위해
 <pre>
 re.match("(abc)+","abcabcabc")
 </pre>
-2. 매치된 문자열중 특정 문자열을 재참조 하기위해
+### b. 매치된 문자열중 특정 문자열을 재참조 하기위해
 
 <pre>
 p = re.compile(r"(\w+)\s+\d+[-]\d+[-]\d+")
@@ -88,5 +88,31 @@ print(m.group(1))
 </pre>
  [group() method와 원하는 index를 사용하여 재참조 할 수 있음]()
 
-3. 패턴내부에서도 group 된 문자열을 재참조 할 수 있음
+### c. 패턴내부에서도 group 된 문자열을 재참조 할 수 있음
+#### \1 \num 을 사용하여 group된 문자를 재참조
+<pre>
+p = re.compile(r'(\b\w+)\s+\1')
+p.search('Paris in the the spring').group()
+'the the'
+</pre>
 
+[string 앞에 r을 주어 내부에 \1,\b을 메타문자로 인식하게 할 수 있음]()
+
+
+### d. 2,3 번에서의 재참조에 이름을 붙이자.
+
+그룹 naming : ([?P<group_name>]()pattern)
+
+re.match_class에서의 재참조 : m.group("group_name")
+
+<pre>
+p = re.compile(r"(?P<name>\w+)\s+((\d+)[-]\d+[-]\d+)")
+m = p.search("park 010-1234-1234")
+print(m.group("name"))
+</pre>
+
+패턴 내부에서의 재참조 : (?P=group_name)
+<pre>
+p = re.compile(r'(?P<word>\b\w+)\s+(?P=word)')
+p.search('Paris in the the spring').group()
+</pre>
