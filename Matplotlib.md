@@ -87,4 +87,112 @@ font2 = {'family':'serif','color':'darkred','size':15}
 
 plt.title("TITLE", fontdict = font1)
 </pre>
+*# you have to put dictinary parameter*
 
+position the Title using loc parameter
+
+<pre>
+plt.title("TITLE", loc = 'left') # right , center
+</pre>
+
+
+## 5) Grid
+you can use the grid() function to add grid lines to the plot.
+
+
+<pre>
+plt.grid(color = 'green', linestyle = '--', linewidth = 0.5 , axis = 'both')
+plt.show()
+</pre>
+*# you cas also use parameter learned at linestyles above *
+*# with axis, you can specify which grid lines to display*
+
+
+# 2. subplots
+With the subplots() function you can draw multiple plots in one figure:
+
+<pre>
+plt.subplots(row , columns , index_of_position)
+</pre>
+
+
+<pre>
+#plot 1
+
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+
+#plot 2
+
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
+
+plt.show()
+</pre>
+
+
+### a. Super Title
+you can add a super title
+<pre>
+#plot 1:
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+plt.title("plot1 title")
+
+#plot 2:
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
+plt.title("plot2 title")
+
+plt.suptitle("MY SHOP")
+plt.show()
+</pre>
+
+# 3. Scatter Plots
+you can use the scatter() function to draw a scatter plot.
+
+[Use scatter() instead of plot()]()
+
+## 1) color
+you also use color argument.
+Moreover can even set a specific color for each dot by using a array of colors
+
+
+<pre>
+color = ['r','g','b']
+plt.scatter( range(3) , range(3) ,c = color)
+plt.show()
+</pre>
+
+
+### ColorMap
+The Matplotlib module has a number of available colormaps.
+
+A colormap is like a list of colors, where each color has a value that ranges from 0 to 100 ( accoroding to value , range change )
+
+[using a colormap , you automatically set a color according to y_value ( or another value )]()
+
+<pre>
+plt.scatter(np.arange(0,1,0.1), np.arange(0,1,0.1), c = np.arange(0,1,0.1), cmap='viridis')
+plt.colorbar()
+plt.show()
+</pre>
+*# using color bar , you can see color of value*
+
+## 2) size
+You can change the size of the dots with the s argument.
+Like colors , array is ok.
+
+<pre>
+plt.scatter(x, y, s=[1,2,100])
+</pre>
+
+## 3) transparency
+
+You can adjust the transparency of the dots with the alpha argument.
+Of course , array is ok
+
+
+<pre>
+plt.scatter(x, y, alpha=0.5)
+</pre>
