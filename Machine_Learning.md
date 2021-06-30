@@ -35,7 +35,7 @@ numpy.median(array)
 scipy.mode(array)
 </pre>
 
-# 2 . Standard Deviation?
+# 2. Standard Deviation?
 
 ## 1)  Standard Deviation
 [Standard deviation is a number that describes how spread out the values are.]()
@@ -44,7 +44,7 @@ A low standard deviation means that most of the numbers are close to the mean (a
 
 A high standard deviation means that the values are spread out over a wider range.
 
-###### Use Numpy_method
+###### <Use Numpy_method>
 <pre>
 x = numpy.std(array)
 </pre>
@@ -66,4 +66,8 @@ In fact, if you take the square root of the variance, you get the standard devia
 <pre>
 x = numpy.var(array)
 </pre>
+   
+   
+# 3. What are Percentiles?
+
 
