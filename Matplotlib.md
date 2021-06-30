@@ -104,7 +104,8 @@ you can use the grid() function to add grid lines to the plot.
 plt.grid(color = 'green', linestyle = '--', linewidth = 0.5 , axis = 'both')
 plt.show()
 </pre>
-*# you cas also use parameter learned at linestyles above *
+*# you cas also use parameter learned at linestyles above*
+
 *# with axis, you can specify which grid lines to display*
 
 
