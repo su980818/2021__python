@@ -69,5 +69,23 @@ x = numpy.var(array)
    
    
 # 3. What are Percentiles?
+[Percentiles are used in statistics to give you a number that describes the value that a given percent of the values are lower than.]()
 
 
+if the answer of 80 percentile is 20 value ,  then 80% of array are lower then 20_value.
+<pre>
+x = numpy.percentile(ages, 80) # percentile
+</pre>
+   
+   
+# 4. Normal Data Distribution
+In probability theory this kind of data distribution is known as the normal data distribution, or the Gaussian data distribution, after the mathematician Carl Friedrich Gauss who came up with the formula of this data distribution.
+
+
+###### < create a normal data distribution >
+<pre>
+x = np.random.normal(5.0, 1.0, 100000)
+plt.hist(x,100)
+</pre>
+*# 
+   
