@@ -154,7 +154,7 @@ you can use the scatter() function to draw a scatter plot.
 
 [Use scatter() instead of plot()]()
 
-## 1) color
+### a. color
 you also use color argument.
 Moreover can even set a specific color for each dot by using a array of colors
 
@@ -178,7 +178,7 @@ plt.show()
 </pre>
 *# using color bar , you can see color of value*
 
-## 2) size
+### b. size
 You can change the size of the dots with the s argument.
 Like colors , array is ok.
 
@@ -186,7 +186,7 @@ Like colors , array is ok.
 plt.scatter(x, y, s=[1,2,100])
 </pre>
 
-## 3) transparency
+### c. transparency
 
 You can adjust the transparency of the dots with the alpha argument.
 Of course , array is ok
