@@ -28,7 +28,7 @@ Machine Learning is a program that analyses data and learns to predict the outco
 + **Median** - The mid point value ( in sorted array )
 + **Mode** - The most common value
 
-###### Use Numpy_method and Scipy_method
+###### <Use Numpy_method and Scipy_method>
 <pre>
 numpy.mean(array)
 numpy.median(array)
@@ -38,7 +38,7 @@ scipy.mode(array)
 # 2 . Standard Deviation?
 
 ## 1)  Standard Deviation
-Standard deviation is a number that describes how spread out the values are.
+[Standard deviation is a number that describes how spread out the values are.]()
 
 A low standard deviation means that most of the numbers are close to the mean (average) value.
 
@@ -49,10 +49,10 @@ A high standard deviation means that the values are spread out over a wider rang
 x = numpy.std(array)
 </pre>
 ## 2) Variance
-Variance is another number that indicates how spread out the values are.
+[Variance is another number that indicates how spread out the values are.]()
 
 In fact, if you take the square root of the variance, you get the standard deviation!
-> √Variance = Standard Deviation
+> √ Variance = Standard Deviation
 
 [<To calculate the variance you have to do as follows>]()
 1. For each value, find the difference from the mean:
@@ -62,7 +62,7 @@ In fact, if you take the square root of the variance, you get the standard devia
  
 
 
-###### Use Numpy_method
+###### <Use Numpy_method>
 <pre>
 x = numpy.var(array)
 </pre>
