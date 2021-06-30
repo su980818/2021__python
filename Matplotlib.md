@@ -27,8 +27,8 @@ plt.plot([1,2] , [2,4])
 plt.show()
 </pre>
 
-# 2. Shape
-## 1) marker
+## 1) Shape
+### a) marker
 if you want plotting without line?
 
 [add a plot parameter of marker(ms) ]()
@@ -47,7 +47,7 @@ plt.plot(xpoints, ypoints, marker = 'o')
 2. hexadecimal color values( like #4CAF50 )
 
 
-## 2) Linestyle
+### b) Linestyle
 
 
 [you can also use ]()
@@ -61,7 +61,7 @@ plt.plot(ypoints, color = 'r')
 plt.plot(ypoints, linewidth = '20.5')
 </pre>
 
-## 3)  shortcut string notation 
+### c)  shortcut string notation 
 
 You can use the shortcut string notation parameter to specify the marker.
 [fmt(Format Strings) = marker|line|color]()
@@ -70,7 +70,7 @@ You can use the shortcut string notation parameter to specify the marker.
 plt.plot(xpoints, ypoints, 'o:r')
 </pre>
 
-## 4) Labels and Titles 
+### d) Labels and Titles 
 
  you can use the xlabel() and ylabel() functions to set a label for the x- and y-axis. and  you can you the title() method to set a title
  <pre>
@@ -96,7 +96,7 @@ plt.title("TITLE", loc = 'left') # right , center
 </pre>
 
 
-## 5) Grid
+### e) Grid
 you can use the grid() function to add grid lines to the plot.
 
 
@@ -108,7 +108,7 @@ plt.show()
 *# with axis, you can specify which grid lines to display*
 
 
-# 2. subplots
+## 2) subplots
 With the subplots() function you can draw multiple plots in one figure:
 
 <pre>
@@ -148,7 +148,7 @@ plt.suptitle("MY SHOP")
 plt.show()
 </pre>
 
-# 3. Scatter Plots
+# 2. Scatter Plots
 you can use the scatter() function to draw a scatter plot.
 
 [Use scatter() instead of plot()]()
@@ -194,3 +194,55 @@ Of course , array is ok
 <pre>
 plt.scatter(x, y, alpha=0.5)
 </pre>
+
+# 3. Bars
+
+
+With Pyplot, you can use the bar() function to draw bar graphs:
+
+In bar , x_axis is categories and y_axis is value
+
+<pre>
+plt.bar(["a","b"],[3,2])
+plt.show()
+</pre>
+
+Simply add a h at the end than you can use Horizontal Bar
+
+<pre>
+plt.barh(x, y)
+plt.show()
+</pre>
+
+### a. colors 
+
+### b. Width and Height
+The bar() takes the keyword argument width to set the width of the bars
+In horizontal bar, use Height argument
+
+<pre>
+lt.bar(x, y, width = 0.1)
+plt.show()
+</pre>
+
+# 4. Histogram
+
+[A histogram is a graph showing frequency distributions.]()
+
+[It is a graph showing the number of observations within each given interval.]()
+
+In Matplotlib, we use the hist() function to create histograms.
+<pre>
+x = np.random.normal(170, 10, 250)
+plt.hist(x)
+plt.show() 
+</pre>
+
+# 5. Pie Charts
+<pre>
+y = np.array([35, 25, 25, 15])
+
+plt.pie(y, labels = [ a, b, c, d] ,startangle = 90)
+plt.show() 
+</pre>
+
