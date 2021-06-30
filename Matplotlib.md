@@ -165,12 +165,10 @@ plt.show()
 </pre>
 
 
-### ColorMap
-The Matplotlib module has a number of available colormaps.
+### What is ColorMap ?
+A colormap is like a list of colors, where each color has a value that ranges from 0 to 100 ( accoroding to value , range changing! )
 
-A colormap is like a list of colors, where each color has a value that ranges from 0 to 100 ( accoroding to value , range change )
-
-[using a colormap , you automatically set a color according to y_value ( or another value )]()
+[using a colormap , you automatically set a color according to color_value]()
 
 <pre>
 plt.scatter(np.arange(0,1,0.1), np.arange(0,1,0.1), c = np.arange(0,1,0.1), cmap='viridis')
