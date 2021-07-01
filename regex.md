@@ -116,3 +116,61 @@ print(m.group("name"))
 p = re.compile(r'(?P<word>\b\w+)\s+(?P=word)')
 p.search('Paris in the the spring').group()
 </pre>
+
+
+# 3. 전방탐색 (Lookahead Assertions)
+[조건을 추가하는 기법]()
+
+[이러한 패턴을 충족할시 이를 충족하는 패턴은 소비하지않고 이것이 없었던 것처럼 다음에 오는 일반적인 패턴을 수행함 충족하지 않을경우는 패턴 매칭을 종료]()
+
+### a. 긍정형 전방 탐색 [(?=patter_of_condition)]()
+<pre>
+p = re.compile(".+:")
+m = p.search("http://google.com")
+print(m.group())
+>>> http:
+</pre>
+match 를 통해 http만을 match하고싶다고 하자 
+
+위에서 설명한 전방탐색을 생각해보면 마지막이 : 로 끝나는 조건을 만족하고 이를 만족한다면 다음에 오는 패턴을 수행하면 된다. (지금의 경우는 패턴이 끝남)
+
+<pre>
+p = re.compile(".+(?=:)")
+m = p.search("http://google.com")
+print(m.group())
+>>> http
+</pre>
+
+
+
+
+### b. 부정형 전방 탐색 [(?!=patter_of_condition)]()
+
+<pre>
+import re
+
+p = re.compile(".+[.].+$")
+print( p.search("abc.h").group() );
+print( p.search("abc.bat").group() );
+print( p.search("abc.bad").group() );
+</pre>
+match를 통해 확장자가 bad 인 경우만을 제외하고 match를 하고 싶다고 하자. 
+
+부정형 전방탐색은 긍정형 전방 탐색과 다르게 조건에 있는 patter과 일치하지 않는 경우만 다음에 오는 패턴을 수행하기 때문에 
+
+<pre>
+p = re.compile(".+[.](?!bad).+$")
+print( p.search("abc.h").group() );
+print( p.search("abc.bat").group() );
+print( p.search("abc.bad") ); >> NONE
+</pre>
+(?1bad) 라는 조건을 충족하는지를 검색할때는 문자를 소비하지않고 조건의 일치 여부를 판단한후 조건이 원래부터 없었던거 처럼 패턴매칭을 시작한다. 
+
+# 5. 문자열 바꾸기
+패턴과 
+# 5. 문자열 바꾸기
+<pre>
+p = re.compile('(blue|white|red)')
+p.sub('colour', 'blue socks and red shoes')
+>>> 'colour socks and colour shoes'
+</pre>
