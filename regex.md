@@ -167,10 +167,13 @@ print( p.search("abc.bad") ); >> NONE
 (?1bad) 라는 조건을 충족하는지를 검색할때는 문자를 소비하지않고 조건의 일치 여부를 판단한후 조건이 원래부터 없었던거 처럼 패턴매칭을 시작한다. 
 
 # 5. 문자열 바꾸기
-패턴과 
-# 5. 문자열 바꾸기
+패턴과 매치되는 문자열을 지정한 문자열로 바꾼다. 
 <pre>
 p = re.compile('(blue|white|red)')
-p.sub('colour', 'blue socks and red shoes')
+p.sub('colour', 'blue socks and red shoes', [count = n] ) 매치되는 문자중에 n번만 바꿈
 >>> 'colour socks and colour shoes'
 </pre>
+
+# 6. Greedy vs Non-Greedy
+
+
