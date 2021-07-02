@@ -232,5 +232,6 @@ r2 = r2_score(test_y, mymodel(test_x))
 
 
 # 9. Decision Tree
-https://www.w3schools.com/python/img_ml_decision_tree.png
+A Decision Tree is a Flow Chart, and can help you make decisions based on previous experience.
+
 
