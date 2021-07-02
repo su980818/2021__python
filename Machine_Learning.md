@@ -201,4 +201,36 @@ print(regr.coef_)
 >> [weight_coef , volume_coef]
 </pre>
    
-  
+# 8. Train/Test
+
+Train/Test is a method to measure the accuracy of your model.
+
+It is called Train/Test because you split the the data set into two sets: a training set and a testing set.
+
+EX ) you can use a 80% for train set to create the model , 20% for test set to test the accurancy of model 
+
+
+### a. Split into Train/Test
+
+<pre>
+train_x = x[:80]
+train_y = y[:80]
+
+test_x = x[80:]
+test_y = y[80:]
+</pre>
+*# If you suffle in list , it should be better*
+
+### b. create_model
+### c. R2 
+we use test_set to get R-squared
+
+<pre>
+r2 = r2_score(train_y, mymodel(train_x))
+r2 = r2_score(test_y, mymodel(test_x))
+</pre>
+
+
+# 9. Decision Tree
+https://www.w3schools.com/python/img_ml_decision_tree.png
+
