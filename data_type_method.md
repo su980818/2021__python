@@ -134,11 +134,19 @@
 |count()|	Returns the number of times a specified value occurs in a tuple|
 |index()	|Searches the tuple for a specified value and returns the position of where it was found|
 
+# 5. Python Set Methods
+
+add()	Adds an element to the set
+pop()	Removes an element from the set
+remove()	Removes the specified elemen
 
 
+clear()	Removes all the elements from the set
+copy()	Returns a copy of the set
+update()	Update the set with another set, or any other iterable
 
 
-# Python File Methods
+# 6. Python File Methods
 
 ### [1) Read]()
 |Method	|Description|
