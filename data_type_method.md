@@ -3,7 +3,7 @@
 # 1. Python String Methods
 #### Note: All string methods returns new values. They do not change the original string.
 
-## [1) Convert case]()
+### [1) Convert case]()
 |Method	|Description|
 |-|-|
 |capitalize() |	Converts the first character to upper case|
@@ -16,7 +16,7 @@
 
 
 
-## [2) Return integer]()
+### [2) Return integer]()
 |Method	|Description|
 |-|-|
 |count()|	Returns the number of times a specified value occurs in a string|
@@ -27,7 +27,7 @@
 
 
 
-## [3) Return list ]()
+### [3) Return list ]()
 |Method	|Description|
 |-|-|
 |split(sep, maxsplit)	|Splits the string at the specified separator, and returns a list|
@@ -35,7 +35,7 @@
 |splitlines()	|Splits the string at line breaks and returns a list|
 
 
-## [4) Modify string]()
+### [4) Modify string]()
 |Method	|Description|
 |-|-|
 |replace()|	Returns a string where a specified value is replaced with a specified value|
@@ -52,7 +52,7 @@
 
 
 
-## [5) Return bool_value]()
+### [5) Return bool_value]()
 |Method	|Description|
 |-|-|
 |endswith()|	Returns true if the string ends with the specified value|
@@ -70,7 +70,7 @@
 |isupper()|	Returns True if all characters in the string are upper case|
 
 # 2. Python List/Array Methods
-## [1) Add value and del]()
+### [1) Add value and del]()
 |Method	|Description|
 |-|-|
 |append()|	Adds an element at the end of the list|
@@ -78,14 +78,14 @@
 |insert()	|Adds an element at the specified position|
 |pop()|	Removes the element at the specified position|
 
-## [2) Search with specified value and ..]()
+### [2) Search with specified value and ..]()
 |Method	|Description|
 |-|-|
 |remove()|	Removes the first item with the specified value|
 |count()|	Returns the number of elements with the specified value|
 |index()|	Returns the index of the first element with the specified value|
 
-## [3) Overall Modify]()
+### [3) Overall Modify]()
 |Method	|Description|
 |-|-|
 |copy()|	Returns a copy of the list|
@@ -100,7 +100,7 @@
 
 
 
-## [1) Add value and del]()
+### [1) Add value and del]()
 |Method	|Description|
 |-|-|
 |pop()|	Removes the element with the specified key|
@@ -108,7 +108,7 @@
 |get()	|Returns the value of the specified key|
 |setdefault( key , value )	|Returns the value of the specified key. If the key does not exist: insert the key, with the specified value|
 
-## [2) Return a list]()
+### [2) Return a list]()
 |Method	|Description|
 |-|-|
 |items()|	Returns a list containing a tuple for each key value pair|
@@ -118,7 +118,7 @@
 
 
 
-## [3) Overall Modify]()
+### [3) Overall Modify]()
 |Method	|Description|
 |-|-|
 |clear()	|Removes all the elements from the dictionary|
@@ -140,7 +140,7 @@
 
 # Python File Methods
 
-## [1) Read]()
+### [1) Read]()
 |Method	|Description|
 |-|-|
 |readable()	|Returns whether the file stream can be read or not|
@@ -148,7 +148,7 @@
 |readline()|	Returns one line from the file ( line_string )|
 |readlines()|	Returns a list of lines from the file ( list of readline() )
 
-## [2) Write]()
+### [2) Write]()
 |Method	|Description|
 |-|-|
 |writable()	|Returns whether the file can be written to or not|
@@ -156,7 +156,7 @@
 |writelines()	|Writes a list of strings to the file|
 
 
-## [3) File position]()
+### [3) File position]()
 |Method	|Description|
 |-|-|
 |seekable()|	Returns whether the file allows us to change the file position||
@@ -166,7 +166,7 @@
 **#file position** : 열려있는 파일의 내부에서의 위치 ( char 하나당 1씩 count )
 
 
-## [4) ]()
+### [4) ]()
 |Method	|Description|
 |-|-|
 |isatty()	|Returns whether the file stream is interactive or not|
