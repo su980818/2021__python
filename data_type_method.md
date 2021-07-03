@@ -1,7 +1,7 @@
 
 
 # 1. Python String Methods
-#### [Note: All string methods returns new values. They do not change the original string.]()
+#### Note: All string methods returns new values. They do not change the original string.
 
 ## [1) Convert case]()
 |Method	|Description|
@@ -163,15 +163,18 @@
 ||seek()|	Change the file position|
 |tell()|	Returns the current file position also returns the new postion.|
 
-**file position : 열려있는 파일의 내부에서의 위치 ( char 하나당 1씩 count )**
+**file position** : 열려있는 파일의 내부에서의 위치 ( char 하나당 1씩 count )
 
 
 ## [4) ]()
 |Method	|Description|
 |-|-|
-||isatty()	|Returns whether the file stream is interactive or not|
+|isatty()	|Returns whether the file stream is interactive or not|
 |flush()	|Flushes the internal buffer|
 |detach()|	Returns the separated raw stream from the buffer|
 |fileno()|	Returns a number that represents the stream, from the operating system's perspective|
-|truncate()|	Resizes the file to a specified size|
+|truncate(char_size)|	Resizes the file to a specified size|
 |close()	|Closes the file|
+
+
+**Truncate** : consider a text entry field in an electronic form. If a program limits the size of the field to 255 characters, it may allow you to continue typing past the maxiumum number of characters. However, when the information is submitted or saved, the program truncates the data to the first 255 characters and any additional characters are disregarded.
