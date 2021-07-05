@@ -143,34 +143,42 @@ A set is a collection which is both Unordered ,Unindexed ,Unchangeable and  Dupl
 
 
 
-### [1) Item modfiy]
-add()	Adds an element to the set
-pop()	Removes an element from the set
-remove()	Removes the specified element (If the specified item does not exist, it will raise an error.)
-discard()	Remove the specified item( it don't raise an error )
+### [1) Item modfiy]()
+|Method	|Description|
+|-|-|
+|add()|	Adds an element to the set|
+|pop()|	Removes an element from the set|
+|remove()|	Removes the specified element (If the specified item does not exist, it will raise an error.)|
+|discard()	|Remove the specified item( it don't raise an error )|
 
 
 ### [2) Set operation]()
-difference()	Returns a set containing the difference between two or more sets
-difference_update()	Removes the items in this set that are also included in another, specified set
-intersection()	Returns a set, that is the intersection of two or more sets
-intersection_update()	Removes the items in this set that are not present in other, specified set(s)
-symmetric_difference()	Returns a set with the symmetric differences of two sets
-symmetric_difference_update()	inserts the symmetric differences from this set and another
-union()	Return a set containing the union of sets
+|Method	|Description|
+|-|-|
+|difference()|	Returns a set containing the difference between two or more sets|
+|difference_update()	|Removes the items in this set that are also included in another, specified set|
+|intersection()|	Returns a set, that is the intersection of two or more sets|
+|intersection_update()|	Removes the items in this set that are not present in other, specified set(s)|
+|symmetric_difference()|	Returns a set with the symmetric differences of two sets|
+|symmetric_difference_update()	|inserts the symmetric differences from this set and another|
+|union()|	Return a set containing the union of sets|
 
 ![image](https://user-images.githubusercontent.com/78835559/124404673-e7d04e80-dd76-11eb-9990-74db84eb5232.png)
 
 
-### [3) Retrun bool]
-isdisjoint()	Returns whether two sets have a intersection or not
-issubset()	Returns whether another set contains this set or not
-issuperset()	Returns whether this set contains another set or not
+### [3) Retrun bool]()
+|Method	|Description|
+|-|-|
+|isdisjoint()	|Returns whether two sets have a intersection or not|
+|issubset()	|Returns whether another set contains this set or not|
+|issuperset()|	Returns whether this set contains another set or not|
 
 ### [4) Overall Modify]()
-clear()	Removes all the elements from the set
-copy()	Returns a copy of the set
-update()	Update the set with another set, or any other iterable by adding items from another set 
+|Method	|Description|
+|-|-|
+|clear()	|Removes all the elements from the set|
+|copy()	|Returns a copy of the set|
+|update()	|Update the set with another set, or any other iterable by adding items from another set |
 
 
 
@@ -196,7 +204,7 @@ update()	Update the set with another set, or any other iterable by adding items 
 |Method	|Description|
 |-|-|
 |seekable()|	Returns whether the file allows us to change the file position||
-||seek()|	Change the file position|
+|seek()|	Change the file position|
 |tell()|	Returns the current file position also returns the new postion.|
 
 **#file position** : 열려있는 파일의 내부에서의 위치 ( char 하나당 1씩 count )
