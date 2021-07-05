@@ -135,15 +135,43 @@
 |index()	|Searches the tuple for a specified value and returns the position of where it was found|
 
 # 5. Python Set Methods
+A set is a collection which is both Unordered ,Unindexed ,Unchangeable and  Duplicates Not Allowed(Just combined)
 
+
+
+
+
+
+
+### [1) Item modfiy]
 add()	Adds an element to the set
 pop()	Removes an element from the set
-remove()	Removes the specified elemen
+remove()	Removes the specified element (If the specified item does not exist, it will raise an error.)
+discard()	Remove the specified item( it don't raise an error )
 
 
+### [2) Set operation]()
+difference()	Returns a set containing the difference between two or more sets
+difference_update()	Removes the items in this set that are also included in another, specified set
+intersection()	Returns a set, that is the intersection of two or more sets
+intersection_update()	Removes the items in this set that are not present in other, specified set(s)
+symmetric_difference()	Returns a set with the symmetric differences of two sets
+symmetric_difference_update()	inserts the symmetric differences from this set and another
+union()	Return a set containing the union of sets
+
+![image](https://user-images.githubusercontent.com/78835559/124404673-e7d04e80-dd76-11eb-9990-74db84eb5232.png)
+
+
+### [3) Retrun bool]
+isdisjoint()	Returns whether two sets have a intersection or not
+issubset()	Returns whether another set contains this set or not
+issuperset()	Returns whether this set contains another set or not
+
+### [4) Overall Modify]()
 clear()	Removes all the elements from the set
 copy()	Returns a copy of the set
-update()	Update the set with another set, or any other iterable
+update()	Update the set with another set, or any other iterable by adding items from another set 
+
 
 
 # 6. Python File Methods
@@ -181,12 +209,17 @@ update()	Update the set with another set, or any other iterable
 |flush()	|Flushes the internal buffer|
 |detach()|	Returns the separated raw stream from the buffer|
 |fileno()|	Returns a number that represents the stream, from the operating system's perspective|
-|truncate(char_size)|	Resizes the file to a specified size|
+|truncate(char_size)|	Resizes the file to a specified size |
 |close()	|Closes the file|
 
 
 **# Truncate** : consider a text entry field in an electronic form. If a program limits the size of the field to 255 characters, it may allow you to continue typing past the maxiumum number of characters. However, when the information is submitted or saved, the program truncates the data to the first 255 characters and any additional characters are disregarded.
-
+<pre>
+f = open("demofile2.txt", "w")
+f.write("123456789012345678901234567890")
+f.truncate(20)
+f.close()
+</pre>
 
 
 
