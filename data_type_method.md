@@ -162,7 +162,7 @@ A set is a collection which is both Unordered ,Unindexed ,Unchangeable and  Dupl
 |symmetric_difference()|	Returns a set with the symmetric differences of two sets|
 |symmetric_difference_update()	|inserts the symmetric differences from this set and another|
 |union()|	Return a set containing the union of sets|
-
+###### < symmetric_difference >
 ![image](https://user-images.githubusercontent.com/78835559/124404673-e7d04e80-dd76-11eb-9990-74db84eb5232.png)
 
 
