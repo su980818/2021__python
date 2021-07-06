@@ -150,7 +150,7 @@ Bad data could be:
 ### a. Empty cells
 Empty cells can potentially give you a wrong result when you analyze data.
 
-#### Solution (1) : Remove Rows [dropna()]()
+#### [Solution (1) : Remove Rows dropna()]()
 
 Remove all rows with NULL values
 <pre>
@@ -161,7 +161,7 @@ df.dropna(subset=['Date'], inplace = True)
 *# If you want to remove a NULL in specified column , use the subset argument*
 
 
-#### Solution (2) : Replace Empty specified Values [fillna( value )]()
+#### [Solution (2) : Replace Empty specified Values fillna( value )]()
 
 replaces all empty cells in the whole Data Frame.
 <pre>
@@ -175,7 +175,7 @@ To only replace empty values for one column, specify the column name for the Dat
 df["Calories"].fillna(130, inplace = True)
 </pre>
 
-#### Solution (3) : Replace Using Mean, Median, or Mode
+#### [Solution (3) : Replace Using Mean, Median, or Mode]()
 
 <pre>
 x1 = df["Calories"].mean()
@@ -200,7 +200,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 
 
 
-#### Solution (1) : Replacing Values
+#### [Solution (1) : Replacing Values]()
 <pre>
 df.loc[7, 'Duration'] = 45 # df.loc[7]['Duration'] = 45 not operate
 </pre>
@@ -219,7 +219,7 @@ for index in df.index:
 
 ### d. Removing Duplicates
 
-#### Solution (1) : [duplicated() , drop_duplicates()]()
+#### [Solution (1) : duplicated() , drop_duplicates()]()
 Simply delete all duplicate row
 
 # 3. Data Correlations
