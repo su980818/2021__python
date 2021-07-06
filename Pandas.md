@@ -22,7 +22,7 @@ It is a one-dimensional array holding data of any type.
 
 Label = first column
 
-## 1) Create Series
+## 1) [pd.Series()](): Create Series
 
 <pre>
 import pandas as pd
@@ -36,8 +36,10 @@ print(myvar)
 *# If you not have index , The values are labeled with index number started with index 0*
 
 
+Create a Series from dict
 
 You can also use a key/value object, like a dictionary, when creating a Series.
+
 
 
 <pre>
@@ -50,7 +52,6 @@ myvar = pd.Series(column)
 print(myvar)
 </pre>
 
-Create a Series from dict
 
 <pre>
 import pandas as pd
@@ -68,7 +69,7 @@ Data sets in Pandas are usually multi-dimensional tables, called DataFrames.
 Series is like a column, a DataFrame is the whole table.
 
 
-## 1) create_DataFrames
+## 1) [pd.DataFrame()]() : create_DataFrames
 <pre>
 import pandas as pd
 
@@ -83,7 +84,7 @@ print(df)
 
 ## 2) access to value 
 
-### a. access to column( Series )
+### a. [df["column"] , df.column]() : access to column( Series )
 Data Frame is tabel of Series  , you can use [] as used in two-dimensional arrays.
 
 <pre>
@@ -92,7 +93,7 @@ df["col_name"]
 
 
 
-### b. access to row ( item )
+### b. [df.loc['label']]() : access to row ( item )
 <pre>
 #use a list of indexes:
 print(df.loc[[0, 1]])
@@ -103,7 +104,7 @@ df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
 print(df.loc["day2"])
 </pre>
 
-## 3) Read CSV Files
+## 3) [pd.read_csv("name")]() : Read CSV Files
 
 #### CSV FILES ?
 A simple way to store big data sets is to use CSV files (comma separated files).
@@ -121,10 +122,13 @@ print(df.to_string()) # if you want string output
 </pre>
 *# By default, when you print a DataFrame, you will only get the first 5 rows, and the last 5 rows:*
 
-## 4) Read JSON FILE
+## 4) [pd.read_Json("name")]() :Read JSON FILE
 
 JSON is plain text, but has the format of an object, and is well known in the world of programming, including Pandas.
+
 [JSON objects have the same format as Python dictionaries.]()
+
+
 
 ## 5) Viewing the Data Overview
 
