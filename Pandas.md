@@ -145,7 +145,7 @@ new_df = df.dropna()
 *# If you want to change the original DataFrame, use the inplace = True argument:*
 
 
-#### Solution (2) : Replace Empty Values [fillna( value )]
+#### Solution (2) : Replace Empty specified Values [fillna( value )]
 
 replaces all empty cells in the whole Data Frame.
 <pre>
@@ -153,11 +153,21 @@ df.fillna(130, inplace = True)
 </pre>
 
 
+To only replace empty values for one column, specify the column name for the DataFrame:
 
+<pre>
+df["Calories"].fillna(130, inplace = True)
+</pre>
 
+#### Solution (3) : Replace Using Mean, Median, or Mode
 
+<pre>
+x1 = df["Calories"].mean()
+x2 = df["Calories"].median()
+x3 = df["Calories"].mode()[0] # mode = the value that appears most frequently.
 
-
+df["Calories"].fillna(  x    ,inplace=True )
+</pre>
 
 
 
