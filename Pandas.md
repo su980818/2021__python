@@ -22,7 +22,7 @@ It is a one-dimensional array holding data of any type.
 
 Label = first column
 
-## 1) [pd.Series()](): Create Series
+## 1) Create Series : [pd.Series()]()
 
 <pre>
 import pandas as pd
@@ -69,7 +69,7 @@ Data sets in Pandas are usually multi-dimensional tables, called DataFrames.
 Series is like a column, a DataFrame is the whole table.
 
 
-## 1) [pd.DataFrame()]() : create_DataFrames
+## 1) create_DataFrames : [pd.DataFrame()]() 
 <pre>
 import pandas as pd
 
@@ -84,7 +84,7 @@ print(df)
 
 ## 2) access to value 
 
-### a. [df["column"] , df.column]() : access to column( Series )
+### a. access to column( Series ) : [df["column"] , df.column]() 
 Data Frame is tabel of Series  , you can use [] as used in two-dimensional arrays.
 
 <pre>
@@ -93,7 +93,7 @@ df["col_name"]
 
 
 
-### b. [df.loc['label']]() : access to row ( item )
+### b. access to row ( item ) : [df.loc['label']]() :
 <pre>
 #use a list of indexes:
 print(df.loc[[0, 1]])
@@ -104,7 +104,7 @@ df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
 print(df.loc["day2"])
 </pre>
 
-## 3) [pd.read_csv("name")]() : Read CSV Files
+## 3) Read CSV Files : [pd.read_csv("name")]() 
 
 #### CSV FILES ?
 A simple way to store big data sets is to use CSV files (comma separated files).
@@ -122,7 +122,7 @@ print(df.to_string()) # if you want string output
 </pre>
 *# By default, when you print a DataFrame, you will only get the first 5 rows, and the last 5 rows:*
 
-## 4) [pd.read_Json("name")]() :Read JSON FILE
+## 4) Read JSON FILE : [pd.read_Json("name")]() 
 
 JSON is plain text, but has the format of an object, and is well known in the world of programming, including Pandas.
 
@@ -148,6 +148,7 @@ Bad data could be:
 + Duplicates
 
 ### a. Empty cells
+-----
 Empty cells can potentially give you a wrong result when you analyze data.
 
 #### [Solution (1) : Remove Rows dropna()]()
@@ -186,6 +187,7 @@ df["Calories"].fillna(  x    ,inplace=True )
 </pre>
 
 ### b. Data of Wrong Format
+-----
 
 #### Solution (1) : Remove Rows [dropna()]()
 #### Solution (2) : Convert Into a Correct Format [to_datetime()]()
@@ -195,6 +197,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 </pre>
 
 ### c.  Fixing Wrong Data
+-----
 "Wrong data" does not have to be "empty cells" or "wrong format", it can just be wrong, like if someone registered "199" instead of "1.99".
 
 
@@ -218,7 +221,7 @@ for index in df.index:
 
 
 ### d. Removing Duplicates
-
+-----
 #### [Solution (1) : duplicated() , drop_duplicates()]()
 Simply delete all duplicate row
 
