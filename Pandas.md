@@ -161,7 +161,7 @@ df.dropna(subset=['Date'], inplace = True)
 *# If you want to remove a NULL in specified column , use the subset argument*
 
 
-#### Solution (2) : Replace Empty specified Values [fillna( value )]
+#### Solution (2) : Replace Empty specified Values [fillna( value )]()
 
 replaces all empty cells in the whole Data Frame.
 <pre>
@@ -219,7 +219,7 @@ for index in df.index:
 
 ### d. Removing Duplicates
 
-#### Solution (1) : duplicated() , drop_duplicates()
+#### Solution (1) : [duplicated() , drop_duplicates()]()
 Simply delete all duplicate row
 
 # 3. Data Correlations
