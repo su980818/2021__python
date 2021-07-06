@@ -142,10 +142,10 @@ The DataFrames object has a method called info(), that gives you more informatio
 Data cleaning means fixing bad data in your data set.
 
 Bad data could be:
-+ Empty cells 
-+ Data in wrong format
-+ Wrong data
-+ Duplicates
++ a.Empty cells 
++ b.Data in wrong format
++ c.Wrong data
++ d.Duplicates
 
 ### a. Empty cells
 -----
