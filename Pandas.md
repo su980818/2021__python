@@ -27,9 +27,9 @@ Label = first column
 <pre>
 import pandas as pd
 
-a = [1, 7, 2]
+column = [1, 7, 2]
 
-myvar = pd.Series(a, index = ["x", "y", "z"])
+myvar = pd.Series(column, index = ["item1", "item2", "item3"])
 
 print(myvar)
 </pre>
@@ -43,9 +43,9 @@ You can also use a key/value object, like a dictionary, when creating a Series.
 <pre>
 import pandas as pd
 
-calories = {"x": 1, "y": 7, "z": 2}
+column = {"item1": 1, "item2": 7, "item3": 2}
 
-myvar = pd.Series(calories)
+myvar = pd.Series(column)
 
 print(myvar)
 </pre>
@@ -81,8 +81,18 @@ df = pd.DataFrame(data)
 print(df) 
 </pre>
 
-## 2) Return a Row ( one data )
+## 2) access to value 
 
+### a. access to column( Series )
+Data Frame is tabel of Series  , you can use [] as used in two-dimensional arrays.
+
+<pre>
+df["col_name"]
+</pre>
+
+
+
+### b. access to row ( item )
 <pre>
 #use a list of indexes:
 print(df.loc[[0, 1]])
@@ -140,9 +150,11 @@ Empty cells can potentially give you a wrong result when you analyze data.
 
 Remove all rows with NULL values
 <pre>
-new_df = df.dropna()
+df.dropna(subset=['Date'], inplace = True)
 </pre>
 *# If you want to change the original DataFrame, use the inplace = True argument:*
+
+*# If you want to remove a NULL in specified column , use the subset argument*
 
 
 #### Solution (2) : Replace Empty specified Values [fillna( value )]
@@ -169,5 +181,53 @@ x3 = df["Calories"].mode()[0] # mode = the value that appears most frequently.
 df["Calories"].fillna(  x    ,inplace=True )
 </pre>
 
+### b. Data of Wrong Format
 
+#### Solution (1) : Remove Rows [dropna()]()
+#### Solution (2) : Convert Into a Correct Format [to_datetime()]()
+Fix a wrong format with another correct format , but empty value is remaning as it is
+<pre>
+df['Date'] = pd.to_datetime(df['Date'])
+</pre>
+
+### c.  Fixing Wrong Data
+"Wrong data" does not have to be "empty cells" or "wrong format", it can just be wrong, like if someone registered "199" instead of "1.99".
+
+
+
+
+#### Solution (1) : Replacing Values
+<pre>
+df.loc[7, 'Duration'] = 45 # df.loc[7]['Duration'] = 45 not operate
+</pre>
+
+If you have som boundaries for legal values , and replace any. values that are outside of the boundaries.
+
+<pre>
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+for index in df.index:
+    if(df.loc[index]["Duration"] > 120):
+        df.loc[index ,"Duration"] = 120 # or df.drop(index,inplace=True
+</pre>
+
+
+### d. Removing Duplicates
+
+#### Solution (1) : duplicated() , drop_duplicates()
+Simply delete all duplicate row
+
+# 3. Data Correlations
+
+The corr() method calculates the relationship between each column in your data set
+
+<pre>
+df.corr()
+            Duration     Pulse  Maxpulse  Calories
+  Duration  1.000000 -0.155408  0.009403  0.922721
+  Pulse    -0.155408  1.000000  0.786535  0.025120
+  Maxpulse  0.009403  0.786535  1.000000  0.203814
+  Calories  0.922721  0.025120  0.203814  1.000000
+</pre>
 
