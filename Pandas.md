@@ -12,6 +12,24 @@ Pandas can clean messy data sets, and make them readable and relevant.
 
 Relevant data is very important in data science.
 
+1. Series
+2. DataFrames
+3. Data Correlations
+4. Plotting
+5. DataFrame Reference
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 1. Series
 
 
