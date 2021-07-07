@@ -238,3 +238,41 @@ df.corr()
   Calories  0.922721  0.025120  0.203814  1.000000
 </pre>
 
+# 4 . Plotting
+With pyplot , you can be simply plotting
+
+## 1) df.plot()
+<pre>
+df = pd.read_csv('data.csv')
+
+df.plot()
+
+plt.show()
+</pre>
+
+## 2) Scatter plot  [kind = 'scatter']()
+Incloude kind , x and y argument to above method
+<pre>
+df = pd.read_csv('data.csv')
+
+df.plot(kind = 'scatter', x = 'Duration', y = 'Calories')
+
+plt.show()
+</pre>
+
+## 3) Histogram plot [kind = 'Histogram']()
+A histogram shows us the [frequency of each interval](), e.g. how many workouts lasted between 50 and 60 minutes?
+
+<pre>
+df["Duration"].plot(kind = 'hist')
+</pre>
+*# you nead only one column*
+
+
+
+
+
+
+
+
+
