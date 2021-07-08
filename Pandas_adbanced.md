@@ -203,7 +203,7 @@ student_df = pd.DataFrame([('Joe', 91.56),
 print(student_df)
 </pre>
 
-NOW we see how reset_method operate.
+NOW we need to see how reset_method operate.
 
 <pre>
 student_df = student_df.reset_index()
