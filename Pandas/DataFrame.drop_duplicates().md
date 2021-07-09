@@ -8,6 +8,9 @@ Data is gathered from various sources. It may not be in the proper form. It cont
 DataFrame.drop_duplicates(subset=None, keep='first', inplace=False, ignore_index=False)
 </pre>
 
+2. `subset` : This parameter is used to specify the columns that only need to be considered for identifying duplicates.
+3. `keep` : Determines which duplicates (if any) to keep
+4. `ignore_index` :  It is a boolean flag to indicate if row index should be reset after dropping duplicate rows.
 
 
 ## 1) Drop duplicates but keep first
