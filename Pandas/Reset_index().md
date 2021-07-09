@@ -30,7 +30,7 @@ print(student_df)
 *# You can see prior_index changed to column*
 
 
-## 2) Reset index without new column
+## 2) Reset index without new column 'drop'
 If we do not want to add the new column as above case, we can use the drop parameter.(of simply del df['column'] )
 
 
@@ -41,7 +41,7 @@ print(student_df)
 </pre>
 
 
-# 3) Reset index to the range of numbers
+## 3) Reset index to the range of numbers
 When we want to reset the index of the DataFrame such that the new index should start with 1, you simpy
 <pre>
 student_df.index = student_df.index + 1 
