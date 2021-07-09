@@ -106,7 +106,7 @@ print(student_df)
 By default, it reset the index of all the levels and add the new range of indexes in the DataFrame.
 
 
-## 6) Reset index by level
+## 6) Reset index by level `col_level`
 
  If we want to reset the index of the specific level only then, we can use the level parameter of the DataFrame.reset_index() function.
 
@@ -118,8 +118,9 @@ student_df = student_df.reset_index(level='Standard', col_level=1)
 print(student_df)
 </pre>
 
-## 7) Reset index and name other level
-As we see in the above section, in multi-level DataFrame, we have added the ‘Standard’ index at level 1. If there is a case when we need to rename the other level, we need to use the col_fill parameter of DataFrame.
+## 7) Reset index and name other level 'col_fill`
+As we see in the above section, in multi-level DataFrame,   
+we have added the ‘Standard’ index at level 1. If there is a case when we need to rename the other level, we need to use the col_fill parameter of DataFrame.
 
 <pre>
 student_df = student_df.reset_index(level='Standard', col_level=1, col_fill='New_Header')
