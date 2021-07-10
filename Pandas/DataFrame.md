@@ -222,8 +222,9 @@ for (index, row) in student_df.iterrows():
 The`DataFrame.sort_values()` function is used to sort the DataFrame using one or more columns in ascending (default) or descending order.
 
 <pre>
-student_df = student_df.sort_values(by=['col_name'])
+student_df = student_df.sort_values(by=['col_name'],ascending=True)
 </pre>
+
 
 
 
