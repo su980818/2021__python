@@ -106,53 +106,124 @@ Following are the functions that help in selecting the subset of the DataFrame.
 |DataFrame.iloc()	|It is used to select a group of data based on the row and column index position. Use it for slicing and filtering the DataFrame.|
 
 
+# 5. DataFrame modification
+
+
+## 1) Insert columns 
+
+`DataFrame.insert()` function is used to insert a new column in DataFrame at the specified position.
+
+<pre>
+df.insert(loc = col_position, column = col_name, value = default_value)
+</pre>
+
+## 2) Drop columns 
+
+<pre>
+df.drop(columns=[col1,col2...] # or just one column string name
+</pre>
+
+
+## 3) Apply condition 
+
+
+We may need to update the value in the DataFrame based on some condition. `DataFrame.where()` function is used to replace the value of DataFrame, where the condition is False.
+
+<pre>
+where(filter, other=new_value)
+</pre>
+
+It applies the filter condition on [all the rows]() in the DataFrame
+<pre>
+filter = student_df['marks'] > 80
+
+student_df['marks'].where(filter, other=0, inplace=True)
+print(student_df)
+</pre>
+
+*# You can limit column like this*
+
+
+# 6. Drop a columns or index not matched to name_condition 
+
+We can use `DataFrame.filter()` function to fetch only required [label of columns or index]().
+
+
+<pre>
+df.filter(like = name_condition, axis = 'columns' or 'index')
+</pre>
 
 
 
+<pre>
+student_df = student_df.filter(like='a', axis='columns')
+print(student_df)
+</pre>
+*# If column name involve 'a', pass*
 
 
 
+# 7. DataFrame rename columns 
 
 
+ We can use` DataFrame.rename()` function to alter the row or column labels.
+
+<pre>
+df.rename(columns = {'old':'new'}) # Of course, index=dic
+</pre>
+
+# 8. DataFrame Join 
+
+In most of the use cases of Data Analytics, data gathered from multiple sources, and we need to combine that data for further analysis. In such instances, join and merge operations are required.
+
+<pre>
+New_merge_df = df1.join(df2)
+</pre>
+*# you just append new columns*
 
 
+# 9. DataFrame GroupBy
+GroupBy operation means splitting the data and then combining them based on some condition. Large data can be divided into logical groups to analyze it.
+
+`DataFrame.groupby()` function groups the DataFrame [row-wise or column-wise]() based on the condition.
 
 
+**EXAMPLE**
+If we want to analyze each class’s average marks, we need to combine the student data based on the ‘Class’ column and calculate its average using df.groupby(col_label).mean() as shown in the below example.
+
+<pre>
+import pandas as pd
+
+# Create DataFrame from dict `DataFrame.gropby()`
+student_dict = {'Name': ['Joe', 'Nat', 'Harry'], 'Class': ['A', 'B', 'A'], 'Marks': [85.10, 77.80, 91.54]}
+student_df = pd.DataFrame(student_dict)
+print(student_df)
+
+# apply group by 
+student_df = student_df.groupby('Class').mean()
+print(student_df)
+</pre>
+
+# 10. DataFrame Row Iteration 
+
+DataFrame iteration means visiting each element in the DataFrame one by one.
+
+`DataFrame.iterrows()` can loop a DataFrame row-wise. It returns the index and row of the DataFrame in each iteration of the for a loop.
+
+<pre>
+for (index, row) in student_df.iterrows():
+    print(index, row ,'\n')
+</pre>
+*# Return a list of tuple of (index,row_data)*
 
 
+# 11. DataFrame Sorting
 
-e
+The`DataFrame.sort_values()` function is used to sort the DataFrame using one or more columns in ascending (default) or descending order.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<pre>
+student_df = student_df.sort_values(by=['col_name'])
+</pre>
 
 
 
