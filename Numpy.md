@@ -174,7 +174,7 @@ print(newarr)
 
 [As long as the elements required for reshaping are equal in both shapes , It can be reshaping ]()
 
-### a. [Of course Does reshape method return a copy?. NO]()
+### a. [Does reshape method return a copy?. NO]()
 <pre>
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
@@ -204,7 +204,8 @@ print(newarr)
 
 # 7. NumPy Array Iterating
 
-The function nditer() is a helping function that can be used from very basic to very advanced iterations. It solves some basic issues which we face in iteration, lets go through it with examples.
+## 1) nditer()
+The function `nditer()` is a helping function that can be used from very basic to very advanced iterations. It solves some basic issues which we face in iteration, lets go through it with examples.
 
 <pre>
 arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
@@ -212,6 +213,81 @@ arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 for x in np.nditer(arr):
   print(x)
 </pre>
+*# If you dont know nditer, you use 3 for*
+
+### a. With Different Data Types
+We can use `op_dtypes` argument and pass it the expected datatype to change the datatype of elements while iterating.
+
+
+NumPy does not change the data type of the element in-place (where the element is in array) so it needs some other space to perform this action, that extra space is called buffer, and in order to enable it in nditer() we pass flags=['buffered'].
+
+
+<pre>
+for x in np.nditer(arr, flags=['buffered'], op_dtypes=['S']):
+  print(x)
+</pre>
+
+
+
+### b. With Different Step Size
+<pre>
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+for x in np.nditer(arr[:, ::2]):
+  print(x)
+</pre>
+
+
+
+## 2) ndenumerate()
+Sometimes we require corresponding index of the element and olso elemnet while iterating, the `ndenumerate()` method can be used for those usecases.
+
+<pre>
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
+</pre>
+
+
+
+# 8. Joining 
+
+Joining means putting contents of two or more arrays in a single array.
+
+
+We pass a sequence of arrays that we want to join to the `concatenate()` function
+
+
+<pre>
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.concatenate((arr1, arr2))
+</pre>
+
+Join two 2-D arrays along rows (axis=1):
+
+<pre>
+arr1 = np.array([[1, 2], [3, 4]])
+
+arr2 = np.array([[5, 6], [7, 8]])
+
+arr = np.concatenate((arr1, arr2), axis=1)
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
