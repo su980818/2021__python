@@ -164,8 +164,40 @@ sns.distplot(x,label='uniform',kde=False)
 sns.distplot(y,label='rand',kde=False)
 </pre>
 
-## 5)
+## 5) Logistic Distribution
+
+Logistic Distribution is used to describe growth.
+
+Used extensively in machine learning in logistic regression, neural networks etc.
++ loc - mean, where the peak is. Default 0.
++ scale - standard deviation, the flatness of distribution. Default 1.
++ size - The shape of the returned array.
+
+[Both distributions are near identical, but logistic distribution has more area under the tails. ie. It representage more possibility of occurence of an events further away from mean.]()
+
+<pre>
+x = random.logistic(scale=1, size=1000)
+y = random.normal(scale=1,size=1000)
+
+sns.distplot(x,label='log',color='r')
+sns.distplot(y,label='normal',color='b')
+
+plt.show()
+</pre>
+
+## 6) Multinomial Distribution
+
+Multinomial distribution is a generalization of binomial distribution.
+
+It describes outcomes of multi-nomial scenarios unlike binomial where scenarios must be only one of two. e.g. Blood type of a population, dice roll outcome.
+
++ n - number of possible outcomes (e.g. 6 for dice roll).
++ pvals - list of probabilties of outcomes (e.g. [1/6, 1/6, 1/6, 1/6, 1/6, 1/6] for dice roll).
++ size - The shape of the returned array.
 
 
+<pre>
+x = random.multinomial(n=6, pvals=[1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
+</pre>
 
 
