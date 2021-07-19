@@ -191,7 +191,7 @@ Multinomial distribution is a generalization of binomial distribution.
 
 It describes outcomes of multi-nomial scenarios unlike binomial where scenarios must be only one of two. e.g. Blood type of a population, dice roll outcome.
 
-+ n - number of possible outcomes (e.g. 6 for dice roll).
++ n - number of trials.
 + pvals - list of probabilties of outcomes (e.g. [1/6, 1/6, 1/6, 1/6, 1/6, 1/6] for dice roll).
 + size - The shape of the returned array.
 
@@ -199,5 +199,88 @@ It describes outcomes of multi-nomial scenarios unlike binomial where scenarios 
 <pre>
 x = random.multinomial(n=6, pvals=[1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
 </pre>
+*# outcome is array of number of each outcome*
+
+## 7) Other supported Distribution
+
+Exponential Distribution
+Chi Square Distribution
+Rayleigh Distribution
+Pareto Distribution
+Zipf Distribution
+
+# 5. NumPy ufunc
+
+**What are ufuncs?**
+ufuncs stands for "Universal Functions" and they are NumPy functions that operates on the ndarray object.
+
+**Why use ufuncs?**
+ufuncs are used to implement vectorization in NumPy which is way faster than iterating over elements.
+
+**What is Vectorization?**
+Converting iterative statements into a vector based operation is called vectorization.
+
+<pre>
+# Add the Elements of Two Lists!
+x = [1, 2, 3, 4]
+y = [4, 5, 6, 7]
+
+z = np.add(x, y) ; print(z)
+</pre>
+
+## 1) How To Create Your Own ufunc
+To create you own ufunc, you have to define a function, like you do with normal functions in Python, then you add it to your NumPy ufunc library with the frompyfunc() method.
+
+<pre>
+frompyfunc(function , inputs ,outputs)
+</pre>
+
++ function - the name of the function.
++ inputs - the number of input arguments (arrays).
++ outputs - the number of output arrays.
+
+
+<pre>
+def myadd(x, y):
+  return x+y
+
+myadd = np.frompyfunc(myadd, 2, 1)
+
+print(myadd([1, 2, 3, 4], [5, 6, 7, 8]))
+</pre>
+
+## 2) Simple Arithmetic
+|ufuc|
+|-|
+|np.add|
+|np.substract|
+|np.multiply|
+|np.divide|
+|np.power|
+|np.remainder|
+|np.divmod|
+|np.absolute|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
