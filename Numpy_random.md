@@ -266,7 +266,8 @@ print(myadd([1, 2, 3, 4], [5, 6, 7, 8]))
 
 There are primarily five ways of rounding off decimals in NumPy:
 
-
+|round off |method|description|
+|-|-|-|
 |truncation|np.trunc() |Remove the decimals|
 |fix|np.fix() | |
 |rounding|np.around(,decimal place)|function increments preceding digit or specified decimal by 1 if >=5 else do nothing.|
@@ -275,26 +276,172 @@ There are primarily five ways of rounding off decimals in NumPy:
 
 ## 4) NumPy Logs
 
+NumPy provides functions to perform log at the base 2, e and 10.
+
+<pre>
+arr = np.arange(1, 11)
+
+print(np.log2(arr))
+print(np.log(arr))
+print(np.log10(arr))
+</pre>
+
+NumPy does not provide any function to take log at any base, so we can use the `frompyfunc()` function along with inbuilt function `math.log()` with two input parameters and one output parameter
+
+<pre>
+# 1
+def my_rog(value , base):
+    return math.log(value,base)
+my_rog = np.frompyfunc(my_rog,2,1)
+
+# 2
+my_rog = np.frompyfunc(math.log,2,1)
+
+arr = np.arange(1, 11)
+print(my_rog(arr,3))
+</pre>
 
 
+## 5) Summations
+
+summation happens over n elements.
+<pre>
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([1, 2, 3])
+
+newarr = np.sum([arr1, arr2]) # 1+2+3+1+2+3
+newarr = np.sum([arr1, arr2], axis=1)
+</pre>
+
+**Cummulative Sum**
+
+Cummulative sum means partially adding the elements in array.
+
+E.g. The partial sum of [1, 2, 3, 4] would be [1, 1+2, 1+2+3, 1+2+3+4] = [1, 3, 6, 10].
+
+<pre>
+newarr = np.cumsum(arr)
+</pre>
 
 
+## 6) Products
+
+E.g. The Products of [1,2,3,4] would be 1\*2\*3\*4 = 24
+<pre>
+
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([5, 6, 7, 8])
+
+newarr = np.prod([arr1,arr2]) # 1*2*3*4*5*6*7*8
+newarr = np.prod([arr1, arr2], axis=1)  
+</pre>
+
+**Cummulative Product**
+
+E.g. The partial product of [1, 2, 3, 4] is [1, 1*2, 1*2*3, 1*2*3*4] = [1, 2, 6, 24]
+<pre>
+newarr = np.cumprod(arr)
+</pre>
+
+## 7) Differences
+
+A discrete difference means subtracting two successive elements.
+
+E.g. for [1, 2, 3, 4], the discrete difference would be [2-1, 3-2, 4-3] = [1, 1, 1]
+<pre>
+
+arr = np.array([10, 15, 25, 5])
+
+newarr = np.diff(arr, n=2) # if you use n , we can perform this operation repeatedly
+
+print(newarr)
+</pre>
 
 
+## 8) LCM and GCD
+
+LCM : Lowest Common Multiple
+
+GCD : Greatest Common Denominator
+<pre>
+x = np.lcm(4, 6)
+y = np.gcd(9,12)
+</pre>
 
 
+To find the LCM or GCD of all values in an array, you can use the reduce() method.
+<pre>
+arr = np.array([20, 8, 32, 36, 16])
+x = np.lcm.reduce(arr)
+y = np.gcd.reduce(arr)
+print(x,y)
+</pre>
 
 
+## 9) Trigonometric Functions
+
+### a. sin()
+NumPy provides the ufuncs sin(), cos() and tan() that take values [in radians]() and produce the corresponding sin, cos and tan values.
 
 
+<pre>
+arr = np.array([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
+
+x = np.sin(arr)
+
+print(x)
+</pre>
+
+### b. Convert Degrees Into Radians
+
+<pre>
+arr = np.array([90, 180, 270, 360])
+x = np.deg2rad(arr) 
+
+arr = np.array([np.pi/2, np.pi, 1.5*np.pi, 2*np.pi])
+x = np.rad2deg(arr)
+</pre>
+
+### c. arcsin()
+NumPy provides ufuncs arcsin(), arccos() and arctan() that produce [radian values]() for corresponding sin, cos and tan values given.
+
+<pre>
+arr = np.array([1, -1, 0.1])
+x = np.arcsin(arr)
+</pre>
+
+### d. Hypotenues
+
+<pre>
+base = 3
+perp = 4
+
+x = np.hypot(base, perp)
+</pre>
 
 
+## 10) Numpy Set
+A set in mathematics is a collection of unique elements.
 
+### a. Create sets in Numpy
 
+<pre>
+x = np.unique(arr)
+</pre>
 
+### b. Set operation
 
+|Operation|method|
+|-|-|
+| Union| unionld()|
+| Intersection| intersect1d()|
+| Difference| setdiff1d()|
+| Symmetric Difference| setxor1d()|
 
+<pre>
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
 
-
-
-
+newarr = np.union1d(arr1, arr2,assume_unique=True)
+</pre>
+*# If arr1 or arr2 is not unique ,The assume_unique=True cause an error.*
