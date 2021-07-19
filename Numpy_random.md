@@ -262,6 +262,20 @@ print(myadd([1, 2, 3, 4], [5, 6, 7, 8]))
 |np.absolute|
 
 
+## 3) Rounding Decimals
+
+There are primarily five ways of rounding off decimals in NumPy:
+
+
+|truncation|np.trunc() |Remove the decimals|
+|fix|np.fix() | |
+|rounding|np.around(,decimal place)|function increments preceding digit or specified decimal by 1 if >=5 else do nothing.|
+|floor| np.floor()| rounds off decimal to nearest lower integer.|
+|ceil  | np.ceil()|  rounds off decimal to nearest upper integer.|
+
+## 4) NumPy Logs
+
+
 
 
 
