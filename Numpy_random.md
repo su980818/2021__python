@@ -26,9 +26,9 @@ x = random.randint( 10 ,size=(3, 5))
 </pre>
 
 
-### b. random.rand
+### b. random.random
 <pre>
-x = random.rand(size = 100)
+x = random.random(size = 100)
 </pre>
 ### c. choice random number from specify array
 
