@@ -108,6 +108,11 @@ plt.show()
 
 *# with axis, you can specify which grid lines to display*
 
+### f) Tick Display
+
+<pre>
+plt.xticks(x_array) # or any array can be
+</pre>
 
 ## 2) subplots
 With the subplots() function you can draw multiple plots in one figure:
