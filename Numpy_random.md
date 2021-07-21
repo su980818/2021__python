@@ -202,12 +202,13 @@ x = random.multinomial(n=6, pvals=[1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
 *# outcome is array of number of each outcome*
 
 ## 7) Other supported Distribution
-
-Exponential Distribution
-Chi Square Distribution
-Rayleigh Distribution
-Pareto Distribution
-Zipf Distribution
+|Distribution|
+|-|
+|Exponential Distribution|
+|Chi Square Distribution|
+|Rayleigh Distribution|
+|Pareto Distribution|
+|Zipf Distribution|
 
 # 5. NumPy ufunc
 
