@@ -252,3 +252,10 @@ plt.pie(y, labels = [ a, b, c, d] ,startangle = 90)
 plt.show() 
 </pre>
 
+# 6. Save
+If you want to capture plot with png_format,
+
+<pre>
+plt.savefig('pass')
+plt.show()
+</pre>
